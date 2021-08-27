@@ -55,7 +55,7 @@ input.contains("Swift")
 let languages = ["Python", "Ruby", "Swift"]
 
 languages.contains("Swift")
-
+// First solution
 extension String {
     func containsAny(of array: [String]) -> Bool {
         for item in array {
@@ -68,5 +68,5 @@ extension String {
 }
 
 input.containsAny(of: languages)
-
-
+// OR second solution
+languages.contains(where: input.contains)
