@@ -93,3 +93,14 @@ attributedString2.addAttribute(.font, value: UIFont.systemFont(ofSize: 32), rang
 attributedString2.addAttribute(.font, value: UIFont.systemFont(ofSize: 40), range: NSRange(location: 15, length: 6))
 
 
+
+var withAddedPrefix = "pet"
+
+extension String {
+    mutating func withPrefix(prefix:String) {
+        self = prefix + self
+    }
+}
+
+withAddedPrefix.withPrefix(prefix: "asdasd")
+print(withAddedPrefix)
