@@ -39,3 +39,17 @@ var five = "5"
 
 five.isNumber
 withAddedPrefix.isNumber
+
+
+/*
+ Create a String extension that adds a lines property that returns an array of all the lines in a string. So, “this\nis\na\ntest” should return an array with four elements.
+ */
+
+extension String {
+    var wordList: [String] {
+        return components(separatedBy: CharacterSet.alphanumerics.inverted).filter { !$0.isEmpty }
+    }
+}
+var test = "this is test string"
+
+test.wordList
