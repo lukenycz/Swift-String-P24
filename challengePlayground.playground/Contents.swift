@@ -24,3 +24,18 @@ withAddedPrefix.withPrefix(prefix: "car")
 print(withAddedPrefix)
 
 withAddedPrefix.addPrefixIfNeeded("car")
+
+/*
+ 
+ Create a String extension that adds an isNumeric property that returns true if the string holds any sort of number. Tip: creating a Double from a String is a failable initializer.
+ */
+
+extension String  {
+    var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+    }
+}
+var five = "5"
+
+five.isNumber
+withAddedPrefix.isNumber
